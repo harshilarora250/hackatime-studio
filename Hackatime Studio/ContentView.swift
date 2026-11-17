@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  desktop-atime
+//  Hackatime Studio
 //
 //  Created by Harshil on 2026-11-17.
 //

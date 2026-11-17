@@ -12,24 +12,24 @@
 			containerPortal = E8402A0D30ACA47800BAC07F /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E8402A1430ACA47800BAC07F;
-			remoteInfo = "desktop-atime";
+			remoteInfo = "Hackatime Studio";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E8402A1530ACA47800BAC07F /* desktop-atime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desktop-atime.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8402A4030ACA47800BAC07F /* desktop-atimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "desktop-atimeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8402A1530ACA47800BAC07F /* Hackatime Studio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hackatime Studio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8402A4030ACA47800BAC07F /* Hackatime StudioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hackatime StudioTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		E8402A1730ACA47800BAC07F /* desktop-atime */ = {
+		E8402A1730ACA47800BAC07F /* Hackatime Studio */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "desktop-atime";
+			path = "Hackatime Studio";
 			sourceTree = "<group>";
 		};
-		E8402A4030ACA47800BAC080 /* desktop-atimeTests */ = {
+		E8402A4030ACA47800BAC080 /* Hackatime StudioTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "desktop-atimeTests";
+			path = "Hackatime StudioTests";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -55,8 +55,8 @@
 		E8402A0C30ACA47800BAC07F = {
 			isa = PBXGroup;
 			children = (
-				E8402A1730ACA47800BAC07F /* desktop-atime */,
-				E8402A4030ACA47800BAC080 /* desktop-atimeTests */,
+				E8402A1730ACA47800BAC07F /* Hackatime Studio */,
+				E8402A4030ACA47800BAC080 /* Hackatime StudioTests */,
 				E8402A1630ACA47800BAC07F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,8 +64,8 @@
 		E8402A1630ACA47800BAC07F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E8402A1530ACA47800BAC07F /* desktop-atime.app */,
-				E8402A4030ACA47800BAC07F /* desktop-atimeTests.xctest */,
+				E8402A1530ACA47800BAC07F /* Hackatime Studio.app */,
+				E8402A4030ACA47800BAC07F /* Hackatime StudioTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E8402A1430ACA47800BAC07F /* desktop-atime */ = {
+		E8402A1430ACA47800BAC07F /* Hackatime Studio */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E8402A2030ACA47900BAC07F /* Build configuration list for PBXNativeTarget "desktop-atime" */;
+			buildConfigurationList = E8402A2030ACA47900BAC07F /* Build configuration list for PBXNativeTarget "Hackatime Studio" */;
 			buildPhases = (
 				E8402A1130ACA47800BAC07F /* Sources */,
 				E8402A1230ACA47800BAC07F /* Frameworks */,
@@ -86,18 +86,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				E8402A1730ACA47800BAC07F /* desktop-atime */,
+				E8402A1730ACA47800BAC07F /* Hackatime Studio */,
 			);
-			name = "desktop-atime";
+			name = "Hackatime Studio";
 			packageProductDependencies = (
 			);
-			productName = "desktop-atime";
-			productReference = E8402A1530ACA47800BAC07F /* desktop-atime.app */;
+			productName = "Hackatime Studio";
+			productReference = E8402A1530ACA47800BAC07F /* Hackatime Studio.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E8402A4030ACA47800BAC086 /* desktop-atimeTests */ = {
+		E8402A4030ACA47800BAC086 /* Hackatime StudioTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E8402A2F30ACAB3700BAC07F /* Build configuration list for PBXNativeTarget "desktop-atimeTests" */;
+			buildConfigurationList = E8402A2F30ACAB3700BAC07F /* Build configuration list for PBXNativeTarget "Hackatime StudioTests" */;
 			buildPhases = (
 				E8402A4030ACA47800BAC083 /* Sources */,
 				E8402A4030ACA47800BAC081 /* Frameworks */,
@@ -109,13 +109,13 @@
 				E8402A4030ACA47800BAC085 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				E8402A4030ACA47800BAC080 /* desktop-atimeTests */,
+				E8402A4030ACA47800BAC080 /* Hackatime StudioTests */,
 			);
-			name = "desktop-atimeTests";
+			name = "Hackatime StudioTests";
 			packageProductDependencies = (
 			);
-			productName = "desktop-atimeTests";
-			productReference = E8402A4030ACA47800BAC07F /* desktop-atimeTests.xctest */;
+			productName = "Hackatime StudioTests";
+			productReference = E8402A4030ACA47800BAC07F /* Hackatime StudioTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -137,7 +137,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E8402A1030ACA47800BAC07F /* Build configuration list for PBXProject "desktop-atime" */;
+			buildConfigurationList = E8402A1030ACA47800BAC07F /* Build configuration list for PBXProject "Hackatime Studio" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -151,8 +151,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E8402A1430ACA47800BAC07F /* desktop-atime */,
-				E8402A4030ACA47800BAC086 /* desktop-atimeTests */,
+				E8402A1430ACA47800BAC07F /* Hackatime Studio */,
+				E8402A4030ACA47800BAC086 /* Hackatime StudioTests */,
 			);
 		};
 /* End PBXProject section */
@@ -194,7 +194,7 @@
 /* Begin PBXTargetDependency section */
 		E8402A4030ACA47800BAC085 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E8402A1430ACA47800BAC07F /* desktop-atime */;
+			target = E8402A1430ACA47800BAC07F /* Hackatime Studio */;
 			targetProxy = E8402A4030ACA47800BAC084 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -396,7 +396,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 26.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "xyz.elipseday.desktop-atimeTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.elipseday.hackatime-studio-tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -404,7 +404,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/desktop-atime.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/desktop-atime";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hackatime Studio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hackatime Studio";
 			};
 			name = Debug;
 		};
@@ -418,7 +418,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 26.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "xyz.elipseday.desktop-atimeTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.elipseday.hackatime-studio-tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -426,14 +426,14 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/desktop-atime.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/desktop-atime";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hackatime Studio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hackatime Studio";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E8402A1030ACA47800BAC07F /* Build configuration list for PBXProject "desktop-atime" */ = {
+		E8402A1030ACA47800BAC07F /* Build configuration list for PBXProject "Hackatime Studio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E8402A1E30ACA47900BAC07F /* Debug */,
@@ -442,7 +442,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E8402A2030ACA47900BAC07F /* Build configuration list for PBXNativeTarget "desktop-atime" */ = {
+		E8402A2030ACA47900BAC07F /* Build configuration list for PBXNativeTarget "Hackatime Studio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E8402A2130ACA47900BAC07F /* Debug */,
@@ -451,7 +451,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E8402A2F30ACAB3700BAC07F /* Build configuration list for PBXNativeTarget "desktop-atimeTests" */ = {
+		E8402A2F30ACAB3700BAC07F /* Build configuration list for PBXNativeTarget "Hackatime StudioTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E8402A2930ACAB0D00BAC07F /* Debug */,

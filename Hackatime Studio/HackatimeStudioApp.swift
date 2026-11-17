@@ -1,6 +1,6 @@
 //
-//  desktop_atimeApp.swift
-//  desktop-atime
+//  HackatimeStudioApp.swift
+//  Hackatime Studio
 //
 //  Created by Harshil on 2026-11-17.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct desktop_atimeApp: App {
+struct HackatimeStudioApp: App {
     @State private var model = AppModel()
 
     var body: some Scene {

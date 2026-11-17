@@ -6,7 +6,7 @@ real Hackatime API, and inspects the real editor + `wakatime-cli` installation.
 
 ## 1. Starting point
 
-The repository began as an untouched Xcode 26.6 SwiftUI template (`desktop_atimeApp.swift`,
+The repository began as an untouched Xcode 26.6 SwiftUI template (`desktop_atimeApp.swift` (now `HackatimeStudioApp.swift`),
 `ContentView.swift`, Swift 6.3 compiler in Swift 5 language mode, macOS 26.5 deployment target,
 default actor isolation = `MainActor`, file-system-synchronised groups). Both files are kept and
 extended: the `App` struct becomes the Studio entry point and `ContentView` the root view.
@@ -16,8 +16,8 @@ Project-level changes:
 | Change | Why |
 | --- | --- |
 | App Sandbox disabled | Studio must read/write `~/.wakatime.cfg`, inspect `~/.wakatime/`, `~/.vscode/extensions`, and run VS Code's `code` CLI. Studio ships outside the Mac App Store. |
-| Display name `Hackatime Studio` | Product name stays `desktop-atime` so existing build settings keep working. |
-| `desktop-atimeTests` unit-test target (Swift Testing) | Config parsing/writing, project rules, API decoding, detection. |
+| Display name `Hackatime Studio` | Project, targets, scheme and product are named `Hackatime Studio`; the bundle identifier is unchanged. |
+| `Hackatime StudioTests` unit-test target (Swift Testing) | Config parsing/writing, project rules, API decoding, detection. |
 
 ## 2. Verified facts the design depends on
 
@@ -62,7 +62,7 @@ Not available with an API key: weekly/custom goals (only the daily goal is expos
   `wakatime-cli` symlink). Logs live in `~/.wakatime/wakatime.log`; offline queue in
   `~/.wakatime/offline_heartbeats.bdb`.
 
-## 3. Module layout (`desktop-atime/`)
+## 3. Module layout (`Hackatime Studio/`)
 
 ```
 App/            AppModel (single @Observable store), AppRouter, refresh scheduler

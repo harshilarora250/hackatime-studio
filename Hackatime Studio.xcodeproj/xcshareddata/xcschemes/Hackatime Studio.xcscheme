@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E8402A1430ACA47800BAC07F"
-               BuildableName = "desktop-atime.app"
-               BlueprintName = "desktop-atime"
-               ReferencedContainer = "container:desktop-atime.xcodeproj">
+               BuildableName = "Hackatime Studio.app"
+               BlueprintName = "Hackatime Studio"
+               ReferencedContainer = "container:Hackatime Studio.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,9 +35,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E8402A4030ACA47800BAC086"
-               BuildableName = "desktop-atimeTests.xctest"
-               BlueprintName = "desktop-atimeTests"
-               ReferencedContainer = "container:desktop-atime.xcodeproj">
+               BuildableName = "Hackatime StudioTests.xctest"
+               BlueprintName = "Hackatime StudioTests"
+               ReferencedContainer = "container:Hackatime Studio.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E8402A1430ACA47800BAC07F"
-            BuildableName = "desktop-atime.app"
-            BlueprintName = "desktop-atime"
-            ReferencedContainer = "container:desktop-atime.xcodeproj">
+            BuildableName = "Hackatime Studio.app"
+            BlueprintName = "Hackatime Studio"
+            ReferencedContainer = "container:Hackatime Studio.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -74,9 +74,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E8402A1430ACA47800BAC07F"
-            BuildableName = "desktop-atime.app"
-            BlueprintName = "desktop-atime"
-            ReferencedContainer = "container:desktop-atime.xcodeproj">
+            BuildableName = "Hackatime Studio.app"
+            BlueprintName = "Hackatime Studio"
+            ReferencedContainer = "container:Hackatime Studio.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

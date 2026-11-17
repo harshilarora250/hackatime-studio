@@ -1,6 +1,6 @@
 import Foundation
 import Testing
-@testable import desktop_atime
+@testable import Hackatime_Studio
 
 /// Fixtures mirror the JSON produced by hackclub/hackatime controllers
 /// (hackatime_controller.rb, stats_controller.rb, my/heartbeats_controller.rb).

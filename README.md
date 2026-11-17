@@ -9,11 +9,11 @@ VS Code extension. It never tracks time itself.
 
 ## Build & test
 
-Open `desktop-atime.xcodeproj` in Xcode 26+ and run the `desktop-atime` scheme (macOS 26.5+). From the
+Open `Hackatime Studio.xcodeproj` in Xcode 26+ and run the `Hackatime Studio` scheme (macOS 26.5+). From the
 command line:
 
 ```bash
-xcodebuild test -project desktop-atime.xcodeproj -scheme desktop-atime -destination 'platform=macOS'
+xcodebuild test -project "Hackatime Studio.xcodeproj" -scheme "Hackatime Studio" -destination 'platform=macOS'
 ```
 
 The app is **not sandboxed**: it needs to read and write `~/.wakatime.cfg` and `~/.wakatime/`, and

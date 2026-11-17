@@ -1,6 +1,6 @@
 import Foundation
 import Testing
-@testable import desktop_atime
+@testable import Hackatime_Studio
 
 @Suite("INIDocument parsing")
 struct INIDocumentParsingTests {

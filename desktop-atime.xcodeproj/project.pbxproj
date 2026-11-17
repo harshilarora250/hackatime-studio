@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		E8402A4030ACA47800BAC084 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8402A0D30ACA47800BAC07F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8402A1430ACA47800BAC07F;
+			remoteInfo = "desktop-atime";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		E8402A1530ACA47800BAC07F /* desktop-atime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desktop-atime.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8402A4030ACA47800BAC07F /* desktop-atimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "desktop-atimeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = "desktop-atime";
 			sourceTree = "<group>";
 		};
+		E8402A4030ACA47800BAC080 /* desktop-atimeTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "desktop-atimeTests";
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E8402A1230ACA47800BAC07F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8402A4030ACA47800BAC081 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				E8402A1730ACA47800BAC07F /* desktop-atime */,
+				E8402A4030ACA47800BAC080 /* desktop-atimeTests */,
 				E8402A1630ACA47800BAC07F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				E8402A1530ACA47800BAC07F /* desktop-atime.app */,
+				E8402A4030ACA47800BAC07F /* desktop-atimeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = E8402A1530ACA47800BAC07F /* desktop-atime.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E8402A4030ACA47800BAC086 /* desktop-atimeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8402A2F30ACAB3700BAC07F /* Build configuration list for PBXNativeTarget "desktop-atimeTests" */;
+			buildPhases = (
+				E8402A4030ACA47800BAC083 /* Sources */,
+				E8402A4030ACA47800BAC081 /* Frameworks */,
+				E8402A4030ACA47800BAC082 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8402A4030ACA47800BAC085 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E8402A4030ACA47800BAC080 /* desktop-atimeTests */,
+			);
+			name = "desktop-atimeTests";
+			packageProductDependencies = (
+			);
+			productName = "desktop-atimeTests";
+			productReference = E8402A4030ACA47800BAC07F /* desktop-atimeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,10 @@
 				TargetAttributes = {
 					E8402A1430ACA47800BAC07F = {
 						CreatedOnToolsVersion = 26.6;
+					};
+					E8402A4030ACA47800BAC086 = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = E8402A1430ACA47800BAC07F;
 					};
 				};
 			};
@@ -100,12 +152,20 @@
 			projectRoot = "";
 			targets = (
 				E8402A1430ACA47800BAC07F /* desktop-atime */,
+				E8402A4030ACA47800BAC086 /* desktop-atimeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E8402A1330ACA47800BAC07F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8402A4030ACA47800BAC082 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +182,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E8402A4030ACA47800BAC083 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E8402A4030ACA47800BAC085 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8402A1430ACA47800BAC07F /* desktop-atime */;
+			targetProxy = E8402A4030ACA47800BAC084 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E8402A1E30ACA47900BAC07F /* Debug */ = {
@@ -254,11 +329,12 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FU24QF42S6;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Hackatime Studio";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -286,11 +362,12 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FU24QF42S6;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Hackatime Studio";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -306,6 +383,50 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E8402A2930ACAB0D00BAC07F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FU24QF42S6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.elipseday.desktop-atimeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/desktop-atime.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/desktop-atime";
+			};
+			name = Debug;
+		};
+		E8402A2A30ACAB0D00BAC07F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FU24QF42S6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.elipseday.desktop-atimeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/desktop-atime.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/desktop-atime";
 			};
 			name = Release;
 		};
@@ -326,6 +447,15 @@
 			buildConfigurations = (
 				E8402A2130ACA47900BAC07F /* Debug */,
 				E8402A2230ACA47900BAC07F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8402A2F30ACAB3700BAC07F /* Build configuration list for PBXNativeTarget "desktop-atimeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8402A2930ACAB0D00BAC07F /* Debug */,
+				E8402A2A30ACAB0D00BAC07F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

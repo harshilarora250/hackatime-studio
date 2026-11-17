@@ -1,6 +1,7 @@
 #if DEBUG
 import AppKit
 import SwiftUI
+import WidgetKit
 
 /// Developer tool (Debug builds only): when `STUDIO_SNAPSHOT_DIR` is set, Studio renders its own
 /// window for every page in light and dark mode to PNGs, then quits. Used to visually verify UI
@@ -9,6 +10,17 @@ import SwiftUI
 @MainActor
 enum DebugSnapshots {
     static func runIfRequested(model: AppModel) {
+        // `STUDIO_DEBUG_WIDGET_SAMPLE`: write sample data for the desktop widgets, then quit.
+        if ProcessInfo.processInfo.environment["STUDIO_DEBUG_WIDGET_SAMPLE"] != nil {
+            do {
+                try WidgetSnapshot.sample().save()
+                WidgetCenter.shared.reloadAllTimelines()
+                print("widget-sample:", WidgetSnapshot.fileURL?.path ?? "no App Group container")
+            } catch {
+                print("widget-sample failed:", error)
+            }
+            exit(0)
+        }
         // `STUDIO_DEBUG_SETUP_KEY`: run the real setup path (verify with the API, then save), then quit.
         if let key = ProcessInfo.processInfo.environment["STUDIO_DEBUG_SETUP_KEY"] {
             Task {

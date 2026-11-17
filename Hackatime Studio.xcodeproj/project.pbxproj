@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E8402A6030ACA47800BAC009 /* Hackatime Studio Widgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E8402A6030ACA47800BAC001 /* Hackatime Studio Widgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		E8402A4030ACA47800BAC084 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -14,12 +18,44 @@
 			remoteGlobalIDString = E8402A1430ACA47800BAC07F;
 			remoteInfo = "Hackatime Studio";
 		};
+		E8402A6030ACA47800BAC00B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8402A0D30ACA47800BAC07F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8402A6030ACA47800BAC005;
+			remoteInfo = "Hackatime Studio Widgets";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E8402A6030ACA47800BAC00A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E8402A6030ACA47800BAC009 /* Hackatime Studio Widgets.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E8402A1530ACA47800BAC07F /* Hackatime Studio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hackatime Studio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8402A4030ACA47800BAC07F /* Hackatime StudioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hackatime StudioTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8402A6030ACA47800BAC001 /* Hackatime Studio Widgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Hackatime Studio Widgets.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E8402A6030ACA47800BAC004 /* Exceptions for "Hackatime Studio Widgets" folder in "Hackatime Studio Widgets" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E8402A6030ACA47800BAC005 /* Hackatime Studio Widgets */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		E8402A1730ACA47800BAC07F /* Hackatime Studio */ = {
@@ -30,6 +66,19 @@
 		E8402A4030ACA47800BAC080 /* Hackatime StudioTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Hackatime StudioTests";
+			sourceTree = "<group>";
+		};
+		E8402A6030ACA47800BAC002 /* Hackatime Studio Widgets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E8402A6030ACA47800BAC004 /* Exceptions for "Hackatime Studio Widgets" folder in "Hackatime Studio Widgets" target */,
+			);
+			path = "Hackatime Studio Widgets";
+			sourceTree = "<group>";
+		};
+		E8402A6030ACA47800BAC003 /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -49,6 +98,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E8402A6030ACA47800BAC007 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -57,6 +113,8 @@
 			children = (
 				E8402A1730ACA47800BAC07F /* Hackatime Studio */,
 				E8402A4030ACA47800BAC080 /* Hackatime StudioTests */,
+				E8402A6030ACA47800BAC002 /* Hackatime Studio Widgets */,
+				E8402A6030ACA47800BAC003 /* Shared */,
 				E8402A1630ACA47800BAC07F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +124,7 @@
 			children = (
 				E8402A1530ACA47800BAC07F /* Hackatime Studio.app */,
 				E8402A4030ACA47800BAC07F /* Hackatime StudioTests.xctest */,
+				E8402A6030ACA47800BAC001 /* Hackatime Studio Widgets.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,13 +139,16 @@
 				E8402A1130ACA47800BAC07F /* Sources */,
 				E8402A1230ACA47800BAC07F /* Frameworks */,
 				E8402A1330ACA47800BAC07F /* Resources */,
+				E8402A6030ACA47800BAC00A /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E8402A6030ACA47800BAC00C /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				E8402A1730ACA47800BAC07F /* Hackatime Studio */,
+				E8402A6030ACA47800BAC003 /* Shared */,
 			);
 			name = "Hackatime Studio";
 			packageProductDependencies = (
@@ -118,6 +180,29 @@
 			productReference = E8402A4030ACA47800BAC07F /* Hackatime StudioTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E8402A6030ACA47800BAC005 /* Hackatime Studio Widgets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8402A6030ACA47800BAC00D /* Build configuration list for PBXNativeTarget "Hackatime Studio Widgets" */;
+			buildPhases = (
+				E8402A6030ACA47800BAC006 /* Sources */,
+				E8402A6030ACA47800BAC007 /* Frameworks */,
+				E8402A6030ACA47800BAC008 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E8402A6030ACA47800BAC002 /* Hackatime Studio Widgets */,
+				E8402A6030ACA47800BAC003 /* Shared */,
+			);
+			name = "Hackatime Studio Widgets";
+			packageProductDependencies = (
+			);
+			productName = "Hackatime Studio Widgets";
+			productReference = E8402A6030ACA47800BAC001 /* Hackatime Studio Widgets.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -134,6 +219,9 @@
 					E8402A4030ACA47800BAC086 = {
 						CreatedOnToolsVersion = 26.6;
 						TestTargetID = E8402A1430ACA47800BAC07F;
+					};
+					E8402A6030ACA47800BAC005 = {
+						CreatedOnToolsVersion = 26.6;
 					};
 				};
 			};
@@ -153,6 +241,7 @@
 			targets = (
 				E8402A1430ACA47800BAC07F /* Hackatime Studio */,
 				E8402A4030ACA47800BAC086 /* Hackatime StudioTests */,
+				E8402A6030ACA47800BAC005 /* Hackatime Studio Widgets */,
 			);
 		};
 /* End PBXProject section */
@@ -166,6 +255,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E8402A4030ACA47800BAC082 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8402A6030ACA47800BAC008 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -189,6 +285,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E8402A6030ACA47800BAC006 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -196,6 +299,11 @@
 			isa = PBXTargetDependency;
 			target = E8402A1430ACA47800BAC07F /* Hackatime Studio */;
 			targetProxy = E8402A4030ACA47800BAC084 /* PBXContainerItemProxy */;
+		};
+		E8402A6030ACA47800BAC00C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8402A6030ACA47800BAC005 /* Hackatime Studio Widgets */;
+			targetProxy = E8402A6030ACA47800BAC00B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -325,6 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hackatime Studio/Hackatime Studio.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -358,6 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hackatime Studio/Hackatime Studio.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -430,6 +540,72 @@
 			};
 			name = Release;
 		};
+		E8402A6030ACA47800BAC00E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Hackatime Studio Widgets/HackatimeStudioWidgets.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FU24QF42S6;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Hackatime Studio Widgets/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Hackatime Studio";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.elipseday.desktop-atime.widgets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E8402A6030ACA47800BAC00F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Hackatime Studio Widgets/HackatimeStudioWidgets.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FU24QF42S6;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Hackatime Studio Widgets/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Hackatime Studio";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.elipseday.desktop-atime.widgets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -456,6 +632,15 @@
 			buildConfigurations = (
 				E8402A2930ACAB0D00BAC07F /* Debug */,
 				E8402A2A30ACAB0D00BAC07F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8402A6030ACA47800BAC00D /* Build configuration list for PBXNativeTarget "Hackatime Studio Widgets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8402A6030ACA47800BAC00E /* Debug */,
+				E8402A6030ACA47800BAC00F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

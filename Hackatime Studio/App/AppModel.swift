@@ -359,7 +359,9 @@ final class AppModel {
         let graphStart = calendar.date(byAdding: .day, value: -7 * (weeks - 1), to: weekStart)!
         let monthStart = calendar.dateInterval(of: .month, for: now)?.start ?? startOfToday
         let lastWeekStart = calendar.date(byAdding: .day, value: -7, to: weekStart)!
-        let earliest = max([graphStart, monthStart, lastWeekStart].min()!, calendar.date(byAdding: .day, value: -365, to: startOfToday)!)
+        // The desktop activity widget shows up to 16 weeks, whatever the dashboard graph is set to.
+        let widgetStart = calendar.date(byAdding: .day, value: -7 * 15, to: weekStart)!
+        let earliest = max([graphStart, monthStart, lastWeekStart, widgetStart].min()!, calendar.date(byAdding: .day, value: -365, to: startOfToday)!)
 
         var ranges = Set(layout.visible.filter(\.kind.supportsRange).map(\.range))
         ranges.insert(.week) // streak comes with any stats call
@@ -404,6 +406,7 @@ final class AppModel {
         snapshot = DashboardSnapshot(fetchedAt: now, timeZone: tz, today: today, days: days, stats: stats,
                                      spansToday: spans, latest: latest, failures: failures)
         if let latest { latestAny = latest }
+        if let snapshot { WidgetBridge.publish(snapshot) }
         dashboardError = failures.count >= 4 ? failures.values.first : nil
         lastRefresh = now
     }

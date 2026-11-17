@@ -13,33 +13,9 @@ struct ActivityGraph: View {
 
     private var calendar: Calendar { snapshot.calendar }
 
-    private var columns: [[Date]] {
-        let today = calendar.startOfDay(for: Date())
-        let weekStart = calendar.dateInterval(of: .weekOfYear, for: today)?.start ?? today
-        let first = calendar.date(byAdding: .day, value: -7 * (weeks - 1), to: weekStart)!
-        return (0..<weeks).map { w in
-            (0..<7).map { d in calendar.date(byAdding: .day, value: w * 7 + d, to: first)! }
-        }
-    }
-
-    private var thresholds: [Double] {
-        let values = snapshot.days.map(\.seconds).filter { $0 > 0 }.sorted()
-        guard !values.isEmpty else { return [1, 2, 3] }
-        func q(_ p: Double) -> Double { values[min(values.count - 1, Int(Double(values.count - 1) * p))] }
-        return [q(0.25), q(0.5), q(0.75)]
-    }
-
-    private func level(_ seconds: Double) -> Int {
-        guard seconds > 0 else { return 0 }
-        let t = thresholds
-        if seconds <= t[0] { return 1 }
-        if seconds <= t[1] { return 2 }
-        if seconds <= t[2] { return 3 }
-        return 4
-    }
-
     var body: some View {
-        let cols = columns
+        let cols = ActivityIntensity.columns(weeks: weeks, now: Date(), calendar: calendar)
+        let intensity = ActivityIntensity(values: snapshot.days.map(\.seconds))
         let today = calendar.startOfDay(for: Date())
         VStack(alignment: .leading, spacing: 10) {
             let labelWidth: CGFloat = 28
@@ -52,7 +28,7 @@ struct ActivityGraph: View {
                     ForEach(Array(cols.enumerated()), id: \.offset) { index, days in
                         VStack(spacing: gap) {
                             ForEach(days, id: \.self) { day in
-                                cellView(day, today: today, size: cell)
+                                cellView(day, today: today, size: cell, intensity: intensity)
                             }
                         }
                         .opacity(revealed || reduceMotion ? 1 : 0)
@@ -94,12 +70,12 @@ struct ActivityGraph: View {
     }
 
     @ViewBuilder
-    private func cellView(_ day: Date, today: Date, size: CGFloat) -> some View {
+    private func cellView(_ day: Date, today: Date, size: CGFloat, intensity: ActivityIntensity) -> some View {
         let future = day > today
         let seconds = snapshot.seconds(on: day)
         let isHovered = hovered == day
         RoundedRectangle(cornerRadius: Theme.Radius.cell, style: .continuous)
-            .fill(future ? Color.clear : Theme.ramp[level(seconds)])
+            .fill(future ? Color.clear : Theme.ramp[intensity.level(seconds)])
             .overlay {
                 if day == today {
                     RoundedRectangle(cornerRadius: Theme.Radius.cell, style: .continuous).strokeBorder(Theme.accent, lineWidth: 1)

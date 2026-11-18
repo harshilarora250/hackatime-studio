@@ -13,7 +13,10 @@ struct SidebarView: View {
     }
 
     private let groups: [(String, [Item])] = [
-        ("Overview", [Item(route: .dashboard, title: "Dashboard", symbol: "square.grid.2x2", shortcut: "⌘1")]),
+        ("Overview", [
+            Item(route: .dashboard, title: "Dashboard", symbol: "square.grid.2x2", shortcut: "⌘1"),
+            Item(route: .lapse, title: "Lapse", symbol: "film.stack", shortcut: "⌘6"),
+        ]),
         ("Setup", [
             Item(route: .configuration, title: "Configuration", symbol: "slider.horizontal.3", shortcut: "⌘2"),
             Item(route: .folders, title: "Folders & Projects", symbol: "folder", shortcut: "⌘3"),

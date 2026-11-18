@@ -75,7 +75,7 @@ private struct KeyStep: View {
                     Button("Paste") { key = Pasteboard.string?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "" }
                         .buttonStyle(.studioSecondary)
                 }
-                Link("Find your key in Hackatime settings ↗", destination: URL(string: "https://hackatime.hackclub.com/my/settings/setup")!)
+                Link("Find your key in Hackatime settings ↗", destination: URL(string: "https://hackatime.hackclub.com/apk-key")!)
                     .font(.studioCallout)
             }
 

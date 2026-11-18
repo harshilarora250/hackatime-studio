@@ -43,6 +43,7 @@ struct HackatimeStudioApp: App {
                 Button("Folders & Projects") { model.route = .folders }.keyboardShortcut("3", modifiers: .command)
                 Button("Editors") { model.route = .editors }.keyboardShortcut("4", modifiers: .command)
                 Button("Diagnostics") { model.route = .diagnostics }.keyboardShortcut("5", modifiers: .command)
+                Button("Lapse") { model.route = .lapse }.keyboardShortcut("6", modifiers: .command)
                 Divider()
                 Button("Reveal Config File in Finder") { model.perform(.reveal(model.location.url)) }
             }

@@ -3,7 +3,7 @@ import Foundation
 import Observation
 
 enum Route: Hashable, CaseIterable {
-    case dashboard, configuration, folders, editors, diagnostics, settings
+    case dashboard, lapse, configuration, folders, editors, diagnostics, settings
 }
 
 enum SetupFlow: Equatable {
@@ -58,6 +58,9 @@ final class AppModel {
     private(set) var cliToday: Result<String, CLICheckFailure>?
     private(set) var isRunningDiagnostics = false
 
+    // MARK: Lapse
+    let lapse = LapseStore()
+
     // MARK: Studio bookkeeping & prefs
     private(set) var ledger = StudioLedger.load()
     var appearance: AppearancePreference {
@@ -85,6 +88,7 @@ final class AppModel {
         if defaults.object(forKey: StudioDefaults.refresh) == nil { self.refreshInterval = .five }
         self.workingFolders = defaults.stringArray(forKey: StudioDefaults.workingFolders) ?? []
         reloadConfig()
+        lapse.notify = { [weak self] toast in self?.toast = toast }
     }
 
     // MARK: - Derived config values
@@ -162,7 +166,26 @@ final class AppModel {
         async let dash: Void = refreshDashboard()
         async let editors: Void = refreshEditors()
         async let system: Void = refreshInstallation(runCLICheck: includeCLICheck)
-        _ = await (dash, editors, system)
+        // Lapse is only fetched once its page has been opened.
+        async let lapseRefresh: Void = refreshLapseIfOpened()
+        _ = await (dash, editors, system, lapseRefresh)
+    }
+
+    /// The Hackatime user ID Lapse links accounts by (from `/users/current`).
+    var hackatimeUserID: String? {
+        #if DEBUG
+        // Developer tool: preview the Lapse page for any Hackatime user without their key.
+        if let id = ProcessInfo.processInfo.environment["STUDIO_DEBUG_LAPSE_HACKATIME_ID"] { return id }
+        #endif
+        return connection.profile?.id
+    }
+
+    private func refreshLapseIfOpened() async {
+        if lapse.phase != .idle { await refreshLapse(force: true) }
+    }
+
+    func refreshLapse(force: Bool = false) async {
+        await lapse.refresh(hackatimeID: hackatimeUserID, force: force)
     }
 
     func appBecameActive() {

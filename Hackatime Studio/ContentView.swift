@@ -51,6 +51,7 @@ struct ContentView: View {
     @ViewBuilder private var page: some View {
         switch model.route {
         case .dashboard: DashboardView()
+        case .lapse: LapseView()
         case .configuration: ConfigurationView()
         case .folders: FoldersView()
         case .editors: EditorsView()

@@ -51,6 +51,16 @@ Sources: `hackclub/hackatime` (routes, controllers, docs), `wakatime/wakatime-cl
 | `GET {host}/api/v1/users/my/heartbeats/spans?start_date&end_date` | Bearer API key | today's coding sessions |
 | `GET {host}/api/v1/my/heartbeats/most_recent[?editor=vscode]` | Bearer API key | last heartbeat / tracking verification |
 
+### Lapse API (public, unauthenticated)
+Source: `hackclub/lapse` (`packages/api/src/contracts`). Base `https://api.lapse.hackclub.com/api`; responses are
+`{ok, data}` / `{ok:false, error, message}`. Protected routes take Lapse OAuth tokens (PKCE, registered app) or
+staff program keys, **never Hackatime keys**. Studio uses only:
+
+| Endpoint | Used for |
+| --- | --- |
+| `GET /user/query?hackatimeId=N` | Lapse profile linked to the Hackatime `users/current` `id` (`null` if none) |
+| `GET /timelapse/findByUser?user=ID` | the user's PUBLIC timelapses; `playbackUrl` is a public MP4/WebM, `createdAt` is ms epoch, `duration` is seconds recorded |
+
 Not available with an API key: weekly/custom goals (only the daily goal is exposed), the
 `/api/v1/authenticated/*` endpoints (OAuth only). Studio says so in the UI instead of inventing data.
 

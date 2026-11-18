@@ -20,6 +20,14 @@ The app is **not sandboxed**: it needs to read and write `~/.wakatime.cfg` and `
 run VS Code's `code` CLI. It can be distributed directly or notarized, but not through the Mac App
 Store.
 
+## Lapse
+
+The **Lapse** page (⌘6) lists your public [Lapse](https://lapse.hackclub.com) timelapses from the past 7 days.
+You can play them in Studio or download the video files. Lapse doesn't accept Hackatime API keys, so Studio
+uses its public API: it looks up your Lapse profile by your Hackatime user ID (`/user/query?hackatimeId=`)
+and lists your timelapses (`/timelapse/findByUser`). Published videos are unencrypted MP4s. Unlisted
+timelapses and drafts need a Lapse OAuth login, so they aren't shown. Your API key is never sent to Lapse.
+
 ## Desktop widgets
 
 The `Hackatime Studio Widgets` extension adds **Coding Activity** (small: 8 weeks, medium: 16 weeks)
@@ -41,3 +49,4 @@ the app's `Theme` also uses.
   narrow what is captured.
 - `STUDIO_DEBUG_WIDGET_SAMPLE=1` writes sample data for the desktop widgets, then quits.
 - `STUDIO_DEBUG_SETUP_KEY=<key>` runs the real verify-and-save setup path, then quits.
+- `STUDIO_DEBUG_LAPSE_HACKATIME_ID=<id>` shows the Lapse page for any Hackatime user ID, without that user's key.
